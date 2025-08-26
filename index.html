@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nimeshi Boutique</title>
+  <style>
+    body { margin:0; font-family: 'Segoe UI', sans-serif; background:#faf9f7; color:#333; }
+    header { background:white; box-shadow:0 2px 6px rgba(0,0,0,0.1); display:flex; align-items:center; justify-content:space-between; padding:10px 40px; position:sticky; top:0; z-index:100; }
+    header img { height:60px; }
+    nav a { margin:0 15px; text-decoration:none; color:#333; font-weight:500; }
+    nav a:hover { color:#8a6f4d; }
+    .hero { background:url('https://images.unsplash.com/photo-1521335629791-ce4aec67dd47?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat; height:90vh; display:flex; flex-direction:column; justify-content:center; align-items:center; color:white; text-align:center; }
+    .hero h1 { font-size:3rem; background:rgba(0,0,0,0.5); padding:10px 20px; border-radius:8px; }
+    .hero button { margin-top:20px; padding:12px 25px; font-size:1.1rem; border:none; border-radius:25px; background:#8a6f4d; color:white; cursor:pointer; }
+    .section { padding:60px 40px; text-align:center; }
+    .section h2 { font-size:2rem; margin-bottom:30px; }
+    .shop-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+    .card { background:white; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.1); padding:20px; }
+    .card img { width:100%; border-radius:12px; }
+    .card h3 { margin:15px 0 10px; }
+    .card button { background:#8a6f4d; color:white; padding:10px 20px; border:none; border-radius:20px; cursor:pointer; }
+    form { max-width:600px; margin:0 auto; text-align:left; }
+    form label { display:block; margin:10px 0 5px; }
+    form input, form select, form textarea { width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:8px; }
+    form button { background:#8a6f4d; color:white; border:none; padding:12px 25px; border-radius:25px; cursor:pointer; }
+    footer { background:#222; color:#ddd; padding:30px 20px; text-align:center; }
+    footer img { height:40px; margin-bottom:10px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="ChatGPT Image Aug 23, 2025, 03_35_17 PM.png" alt="Nimeshi Logo">
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#design">Design Your Dress</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h1>Design Your Own Elegance with Nimeshi</h1>
+  <button onclick="document.getElementById('design').scrollIntoView({behavior:'smooth'});">Start Designing</button>
+</section>
+
+<section class="section" id="shop">
+  <h2>Shop Collection</h2>
+  <div class="shop-grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80" alt="Dress 1">
+      <h3>Floral Summer Dress</h3>
+      <p>₹1,999</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80" alt="Dress 2">
+      <h3>Classic Evening Gown</h3>
+      <p>₹4,499</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1520975922071-c0e011a53b72?auto=format&fit=crop&w=800&q=80" alt="Dress 3">
+      <h3>Modern Ethnic Wear</h3>
+      <p>₹2,799</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="design">
+  <h2>Design Your Dress</h2>
+  <form>
+    <label for="fabric">Choose Fabric</label>
+    <select id="fabric" name="fabric">
+      <option>Cotton</option>
+      <option>Silk</option>
+      <option>Georgette</option>
+      <option>Velvet</option>
+    </select>
+
+    <label for="lace">Select Lace</label>
+    <select id="lace" name="lace">
+      <option>None</option>
+      <option>Net Lace</option>
+      <option>Embroidered Lace</option>
+      <option>Sequin Lace</option>
+    </select>
+
+    <label for="accessories">Accessories</label>
+    <select id="accessories" name="accessories">
+      <option>None</option>
+      <option>Hanging Beads</option>
+      <option>Pearls</option>
+      <option>Crystal Work</option>
+    </select>
+
+    <label for="measurement">Upload Measurements</label>
+    <input type="file" id="measurement" name="measurement">
+
+    <label for="pickup">Pickup Material From Home?</label>
+    <select id="pickup" name="pickup">
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+
+    <h3>Payment Options</h3>
+    <label><input type="radio" name="payment" value="cod"> Cash on Delivery</label>
+    <label><input type="radio" name="payment" value="upi"> UPI</label>
+
+    <button type="submit">Submit Design Request</button>
+  </form>
+</section>
+
+<section class="section" id="about">
+  <h2>About Nimeshi</h2>
+  <p>Nimeshi Boutique is where tradition meets modern elegance. We let our customers design outfits their way — from fabric to accessories — while we stitch your dream into reality.</p>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact Us</h2>
+  <form>
+    <label>Name</label>
+    <input type="text" placeholder="Your Name">
+    <label>Email</label>
+    <input type="email" placeholder="Your Email">
+    <label>Message</label>
+    <textarea rows="5" placeholder="Write your message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <img src="ChatGPT Image Aug 23, 2025, 03_35_17 PM.png" alt="Nimeshi Logo">
+  <p>© 2025 Nimeshi Boutique | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
